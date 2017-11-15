@@ -1,0 +1,714 @@
+/*
+  As I finish testing on components of my full premium 1000-layouts
+  set of Multipurpose and Dashboard kits I tend to include them
+  in these mini-web templates.  So you will find added extra
+  CSS classes and code coment notes on Bootstrap secrets and
+  CSS secrets.
+
+  Thanks for your telling your peers about these products and
+  support of these products...
+
+  Material-Colors: You will find them in the material-colors.css file,
+                   name-scheme:
+                         bg-* background
+                         fg-* foreground, ie text
+*/
+
+/*
+  Font Assignments
+*/
+html{
+  font-family: "Roboto",sans-serif;
+}
+body{
+  font-family: "Roboto",sans-serif;
+}
+blockquote{
+  font-family: "Roboto Condensed",serif;
+
+}
+cite{
+  font-family: "Roboto Mono",monospace;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: "Roboto Mono",monospace;
+}
+nav{
+  font-family: "Roboto Condensed",serif;
+  font-weight: bold;
+}
+footer{
+  font-family: "Roboto Condensed",serif;
+}
+footer .footer-col-header{
+  font-family: "Roboto Slab",sans-serif;
+}
+.hero-header{
+  font-family: "Roboto Slab",sans-serif;
+  font-weight: bold;
+}
+.promo-heading, .extras-heading, .tools-heading, .more-heading{
+  font-family: "Roboto Slab",sans-serif;
+  font-weight: bold;
+}
+.copyright{
+  font-style: italic;
+}
+.hero-caption{
+  font-style: italic;
+}
+.card h1.card-title,
+.card h2.card-title,
+.card h3.card-title,
+.card h4.card-title,
+.card h5.card-title,
+.card h6.card-title{
+  font-family: "Roboto Slab",sans-serif;
+  font-weight: bold;
+}
+.page-title{
+  font-family: "Roboto Slab",serif;
+  font-weight: bold;
+
+}
+.section-title{
+  font-family: "Roboto Slab",serif;
+  font-weight: bold;
+}
+.tos-date, .privacy-date{
+  font-family: "Roboto Mono",monospace;
+  font-weight: bold;
+}
+.tos-section, .privacy-section{
+  font-family: "Roboto Slab",serif;
+  font-weight: 400;
+}
+
+/*
+   fixed navbar offset for content
+*/
+.content-offset{
+  padding-top: 4.15rem;
+}
+
+.page-title{
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+/*
+   Careful here, its top percentage of card not the image it overlays
+*/
+.fg-card-img-overlay{
+  top: 1%;
+  right: 5%;
+
+}
+.fg-card-title-overlay{
+  padding-top: 1rem;
+  background-color: #1a237e;
+  padding-bottom: 1rem;
+}
+/*
+  using fontawesome symbols instead
+*/
+.fg-content-body-lists{
+  list-style-type: none;
+}
+.section-title{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+/*
+   We do not want a lot of transparency, just a little goes
+   a long way.
+*/
+
+.bg-indigo-base-transparent{
+  background-color: rgba(63, 81, 181, 0.93)
+}
+.no-navbar-no-footer-content{
+  background-color: #1a237e;
+}
+
+
+/*
+   hero button example on how to customize buttons...
+   its easy just folow my easy example
+*/
+.btn-indigo{
+  color: #1a237e;
+  background-color: #5c6bc0;
+  border-color: #5c6bc0;
+  box-shadow: none;
+}
+.btn-indigo:hover{
+  color: #1a237e;
+  background-color: #7986cb;
+  border-color: #7986cb;
+}
+.btn-indigo:focus, .btn-indigo.focus{
+  box-shadow: none, 0 0 0 3px rgba(159, 169, 218, 0.5);
+}
+.btn-indigo.disabled, .btn-indigo:disabled{
+  background-color: #c5cae9;
+  border-color: #c5cae9;
+}
+.btn-indigo:active, .btn-indigo.active,
+.show > .btn-indigo.dropdown-toggle {
+  background-color: #7986cb;
+  background-image: none;
+  border-color: #7986cb;
+  box-shadow: none;
+}
+
+
+
+
+/*
+   A partial copy of the full social set of
+   bootstrap buttons for social media platfomrs.
+
+   ...the full copy is being developed for the super
+   premium set of 1000-layouts template packs
+*/
+.btn-social-facebook{
+  color: #ffffff;
+  background-color: #3f51b5;
+  border-color: #3f51b5;
+  box-shadow: none;
+}
+.btn-soical-facebook:hover{
+  color: #ffffff;
+  background-color: #7986cb;
+  border-color: #7986cb;
+}
+.btn-soical-facebook:focus, .btn-social-facebook.focus{
+  box-shadow: none, 0 0 0 3px rgba(159, 169, 218, 0.5);
+}
+.btn-social-facebook.disabled, .btn-social-facebook:disabled{
+  background-color: #c5cae9;
+  border-color: #c5cae9;
+}
+.btn-social-facebook:active, .btn-social-facebook.active,
+.show > .btn-social-facebook.dropdown-toggle {
+  background-color: #7986cb;
+  background-image: none;
+  border-color: #7986cb;
+  box-shadow: none;
+}
+.btn-social-google{
+  color: #ffffff;
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+  box-shadow: none;
+}
+.btn-soical-google:hover{
+  color: #ffffff;
+  background-color: #d32f2f;
+  border-color: #d32f2f;
+}
+.btn-soical-google:focus, .btn-social-google.focus{
+  box-shadow: none, 0 0 0 3px rgba(229, 57, 53, 0.5);
+}
+.btn-social-google.disabled, .btn-social-google:disabled{
+  background-color: #ef5350;
+  border-color: #ef5350;
+}
+.btn-social-google:active, .btn-social-google.active,
+.show > .btn-social-google.dropdown-toggle {
+  background-color: #f44336;
+  background-image: none;
+  border-color: #f44336;
+  box-shadow: none;
+}
+.btn-social-twitter{
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: #2196f3;
+  box-shadow: none;
+}
+.btn-soical-twitter:hover{
+  color: #ffffff;
+  background-color: #0288d1;
+  border-color: #0288d1;
+}
+.btn-soical-twitter:focus, .btn-social-twitter.focus{
+  box-shadow: none, 0 0 0 3px rgba(3, 169, 244, 0.5);
+}
+.btn-social-twitter.disabled, .btn-social-twitter:disabled{
+  background-color: #4fc3f7;
+  border-color: #4fc3f7;
+}
+.btn-social-twitter:active, .btn-social-twitter.active,
+.show > .btn-social-twitter.dropdown-toggle {
+  background-color: #81d4fa;
+  background-image: none;
+  border-color: #81d4fa;
+  box-shadow: none;
+}
+
+
+
+
+.navbar-white-link-text .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+.navbar-white-link-text .navbar-nav .nav-link:focus, .navbar-white-link-text .navbar-nav .nav-link:hover{
+  color: rgba(255, 255, 255, 0.99);
+}
+
+
+.promo-heading, .extras-heading, .tools-heading, .more-heading{
+  padding-bottom: 2rem;
+}
+
+/*
+  Note, that I only went up so far with media queries to
+  size things...if audeience base uses TV devcies you
+  need to add some media  queries. I left the max-width off of the
+  last media query so there is a deault setting for the large big screen
+  tv media queries I did not get to.
+
+*/
+@media (min-width: 320px) and (max-width: 575px) {
+  .fg-hero{
+    padding-top: 5.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .fg-hero{
+    padding-top: 5.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .fg-hero{
+    padding-top: 7.5rem;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px){
+  .fg-hero{
+    padding-top: 9.5rem;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1499px){
+  .fg-hero{
+    padding-top: 9.5rem;
+  }
+}
+@media (min-width: 1500px) {
+  .fg-hero{
+    padding-top: 12.5rem;
+  }
+}
+
+/*
+   Index background effect
+
+   The general gist is that our effect cannot take more than 2.8ms on mobile thus
+   I have dropped doing a lot of effects for something that still looks cool and is
+   somewhat performance reachable as far as your brand and clients are concerned.
+
+   So here are the secrets to this effect:
+
+   1. to avoid having to declare overflow hidden in the body tag I use
+      transform-orgin of zero
+   2. To apply gradient to image I list the gradient first and than the image
+      in the background-image declaration
+   3. Due to using a background image set background-size to cover
+
+   AND the big secret
+
+   4. The hero-content-bg enclosing tags is the one that gets the background skewed
+      THAN its hero-content-content child element gets its content skewed in the
+      opposite direction so that its back to being completely horizontal. This
+      than gets rid of having to use media queries and absolute
+      positioning of the content portion of the hero.
+
+   5. content-offset has tobe just right, why? Because than as we are using
+      rems and vviewport units we get an equal showing of further
+      content at bottom of screen hint for website viewers to respond to,
+      which is part the point of this effect in the first place. AND, note
+      none of the codepen or other such platforms have this stuff in their demos,
+      ie non of their stuff was polished to work on mobile.
+
+  TRADEOFFS: I could have started absolute positioning the content below the
+             hero but than that introduces how does one effectively
+             make it wokr for both desktop and mobile. That might be
+             for version 2 of this jumbotron replacement.
+
+  CAVETS:  Since it is crossbrowser you can now concentrate on which image choice
+           best represents you or your client's brand and what the correct gradients colors
+           should be to integrate with the Brand's particular color schemes. AND that
+           is the whole idea, right? Plus, since I have eliminated the media queries
+           its damn easy to maintain.
+
+           And, only use it on the home page..having the website viewer introduced to it
+           on the home page is fine...but do not go over-board and want it on every website
+           page.
+
+           You are of course limited to how much you can sqeeze into the hero
+           content.
+
+           And, ONE MORE THING, you can add border radius shape effects if you want
+           but be aware that you will have to maintain a whole set of media
+           queries for each device-platform-form-size. But, if the brand
+           message requries that be effective in delivering the brand message
+           than that is what you have to do.
+
+  NOTE: Sharing the uplabs link to this product on these platforms:
+
+              ProductHunt
+              Twitter
+              Facebook
+              Google Plus
+
+        helps me reach the goal of finishing development of the full premium variation
+        that has 1000-layouts, hundreds of extra CSS classes and hundreds of bootstrap secrets.
+        The more sharing, the faster I can go in developing the premium version. So share it with all
+        your friends and peers.
+
+
+*/
+.hero-bg-parent{
+  /* there are some slight browser bugs in computing width via viewport units I use this value to prevent
+     a horizontal scrollbar being added
+  */
+  width: 98.89vw;
+  height: 95vh;
+
+  overflow: hidden;
+  transform: skewY(-17deg);
+  transform-origin: 0;
+  background-image: linear-gradient(150deg,rgba(130, 177, 255, 0.75) 15%, rgba(68, 138, 255, 0.55) 70%, rgba(41, 121, 255, 0.75) 94%),url("../images/creative-smartphone-notebook-typography-1440x753.png");
+  background-size: cover;
+  border-bottom-right-radius: 12rem;
+}
+
+.hero-content-child{
+    position:absolute;
+    top: 38vh;
+    left: 10vw;
+    transform: skewY(17deg);
+}
+.main-content{
+  position: relative;
+  top: -26vh;
+}
+
+/*
+   This is a quick copy frome some of my tested css classes
+   from my premium super web template pack under development.
+
+   Obviously, in that pack you get different variations and settings, etc.
+
+   Don't forget if you like this stuff than share those uplabs product links
+   on:
+       ProductHunt
+       twitter
+       facebook
+       google plus
+
+    and with your peers. And once again thanks.
+*/
+.card-solutions{
+  background-image: url("../images/my-bg-100x100.png");
+  background-size: cover;
+}
+.card-footer-solutions{
+  border-top: 0px solid rgba(0, 0, 0, 0.12);
+}
+.card-header-solutions{
+  border-bottom: 0px solid rgba(0, 0, 0, 0.12);
+}
+
+.copyright{
+  color: #455a64;
+}
+.border-blues {
+  border-color: #2196f3 !important;
+}
+
+
+
+
+/*
+   Image-Stacks so that can be a base for animation using div as
+   containers for the backgrounds and still very much
+   reposnive as long as we stil set the title overlay as
+   img-fluid class
+
+   What we have:
+      1. Way to do the 13 color stops in the gradient for fake scrim
+      2. Layers of images to animate as they are divs except for the final
+         title overy which instead is a an acctual img
+      3  Possilbity to different shapes to the gradeint overlay
+      4  Main thing, when making a fake scrim gradient is that
+         you want the edgeoft eh gradient not to have a sharp
+         fall-off. Sometimes, you can prevent that by just
+         having the high trasn amount gradeint stop at edge
+         of where the image starts. In my example my first
+         color stop for the gradient is at 8% top of image.
+*/
+.img-container-about-humble{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/about/pexels-photo-64778-1440x753.png");
+  background-size: cover;
+}
+.img-container-careers-mylife{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/careers/black-and-white-city-man-people-1440x753.png");
+  background-size: cover;
+}
+.img-container-careers-whyjoinme{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/careers/city-road-street-buildings-1440x753.png");
+  background-size: cover;
+}
+.img-container-services-services{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/services/pexels-photo-210689-1440x753.png");
+  background-size: cover;
+}
+.img-container-services-freequotes{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/services/money-card-business-credit-card-50987-1440x753.png");
+  background-size: cover;
+}
+.img-container-services-clients-adbeus{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/services/adbeus.png");
+  background-size: cover;
+}
+.img-container-services-clients-closeheat{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/services/closeheat.png");
+  background-size: cover;
+}
+.img-trans{
+  width: 100%;
+  /* on laptop 17 this about 285px for the col-lg-6 size and it puts the title overlay size at 94px for the title font */
+  height: 285px;
+  /* fake scrim gradient*/
+  background-image: linear-gradient(180deg,rgba(26, 35, 126, 0.12) 8%, rgba(26, 35, 126, 0.20) 10%,rgba(26, 35, 126, 0.25) 15%, rgba(26, 35, 126, 0.75) 70%, rgba(26, 35, 126, 0.85) 94%),url("../images/about/trans-1440x753.png");
+  background-size: cover;
+}
+.img-container-about-founder{
+  width: 100%;
+  height: auto;
+  background-image: url("../images/about/360_br10q_1005.png");
+  background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  Client Quotes Carousel, why? Why Not?
+
+  Again, from components being developed as part of
+  my super premimum 1000-layouts web template pack.
+
+  You will find the js code in the clientquotesccarousel.js file in the
+  js sub-folder in the assets folder.
+
+  Yes, it makes a nice slim and agile products carousel as
+  well, imagine that.
+
+  And again I appreciate any  mention of this product with your
+  peers. IT REALLY IS DEEPLY APPRECIATED!
+*/
+.quotes-carousel-container {
+  max-width: 62rem;
+  height: 28em;
+  margin: 0 auto;
+  overflow-x: hidden;
+  /* overflow-y: scroll and adjust if you need the y-axis scroll */
+  overflow-y: hidden;
+}
+
+.quotes-carousel {
+  position: relative;
+  min-height: 22em;
+  width: 100%;
+}
+.quotes-carousel .quote-person {
+  background-size: 100%;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(31, 0, 33, 0.5);
+  height: 7em;
+  left: calc(50% - 3.5em);
+  position: absolute;
+  top: -7em;
+  width: 7em;
+  -webkit-transition: all .4s .5s ease-out;
+  transition: all .4s .5s ease-out;
+}
+.quotes-carousel .quotee {
+  display: block;
+}
+.quotes-carousel .quote {
+  cursor: pointer;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(calc(100% + 12rem), -50%) scale(0.6);
+          transform: translate(calc(100% + 12rem), -50%) scale(0.6);
+  -webkit-transition: opacity 0.5s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: opacity 0.5s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 0.5s ease-out;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 0.5s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  display: block;
+  margin: 8em auto 4em;
+  max-width: 18em;
+  min-width: 12em;
+  padding: 1em;
+}
+.quotes-carousel .quote.previous {
+  -webkit-transform: translate(-150%, -50%) scale(0.8);
+          transform: translate(-150%, -50%) scale(0.8);
+  opacity: .5;
+  -webkit-transition: opacity 1s 0.4s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: opacity 1s 0.4s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 1s 0.4s ease-out;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 1s 0.4s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+}
+@media only screen and (max-width: 520px) {
+  .quotes-carousel .quote.previous {
+    -webkit-transform: translate(-140%, -50%) scale(0.8);
+            transform: translate(-140%, -50%) scale(0.8);
+  }
+  .quotes-carousel .quote.previous .quote-person {
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
+  }
+}
+.quotes-carousel .quote.current {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 1;
+  height: auto;
+}
+.quotes-carousel .quote.next {
+  -webkit-transform: translate(50%, -50%) scale(0.8);
+          transform: translate(50%, -50%) scale(0.8);
+  opacity: .5;
+  -webkit-transition: opacity 1s 0.6s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: opacity 1s 0.6s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 1s 0.6s ease-out;
+  transition: transform 1s cubic-bezier(0.77, 0, 0.35, 1), opacity 1s 0.6s ease-out, -webkit-transform 1s cubic-bezier(0.77, 0, 0.35, 1);
+}
+@media only screen and (max-width: 520px) {
+  .quotes-carousel .quote.next {
+    -webkit-transform: translate(40%, -50%) scale(0.8);
+            transform: translate(40%, -50%) scale(0.8);
+  }
+  .quotes-carousel .quote.next .quote-person {
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
+}
+.quotes-carousel .quote.remove-left {
+  -webkit-transform: translate(calc(-150% - 12rem), -50%) scale(0.8);
+          transform: translate(calc(-150% - 12rem), -50%) scale(0.8);
+}
+.quotes-carousel .quote.place-left {
+  -webkit-transform: translate(calc(-150% - 12rem), -50%) scale(0.6);
+          transform: translate(calc(-150% - 12rem), -50%) scale(0.6);
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+
+/*
+   site  card forms styling
+*/
+.sign-up-sign-in-header-footer, .sign-out-header-footer, .password-reset-header-footer{
+  background-color: #0d47a1;
+  color: #ffffff;
+}
+
+
+/*
+  Small part of the full animation CSS library
+  being developed for the preimum 1000-layouts
+  web template pack
+
+  The faster you share the uplabs product link on these 
+  platforms:
+            ProductHunt
+            twitter
+            gogole-plus
+            facebook
+
+  the faster than premium web template pack gets completed and
+  possibly into your hands.
+*/
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+
+  }
+}
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+}
+.hero-header{
+  animation-delay: 1.3s;
+
+}
+.hero-caption{
+  animation-delay: 1.8s;
+
+}
+.hero-button{
+  animation-delay: 2.3s;
+
+}
+.img-container-about-humble{
+    animation-delay: 1.3s;
+}
+.img-container-about-founder{
+  animation-delay: 1.3s;
+}
+.img-container-careers-mylife{
+  animation-delay: 1.3s;
+}
+.img-container-careers-whyjoinme{
+  animation-delay: 1.3s;
+}
